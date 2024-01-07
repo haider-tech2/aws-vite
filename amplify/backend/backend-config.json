@@ -1,20 +1,35 @@
 {
   "api": {
     "awsviteamplidy": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "awsviteamplidy5bb80b71"
+        }
+      ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2025-01-06T14:46:45.057Z",
+                "apiKeyExpirationDays": 365,
+                "description": "testapi"
+              },
+              "authenticationType": "API_KEY"
+            },
             {
               "authenticationType": "AWS_IAM"
             }
           ],
           "defaultAuthentication": {
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
-            },
-            "authenticationType": "API_KEY"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authawsviteamplidy5bb80b71"
+            }
           }
         }
       },

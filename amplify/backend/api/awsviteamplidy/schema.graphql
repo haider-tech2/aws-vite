@@ -1,0 +1,5 @@
+type Testform @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  ipaddress: AWSIPAddress!
+  human: Boolean!
+} 

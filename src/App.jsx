@@ -3,7 +3,7 @@ import { Amplify } from 'aws-amplify';
 
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { Testform } from './ui-components';
+// import { Testform } from './ui-components';
 
 import awsExports from './aws-exports';
 Amplify.configure(awsExports);
